@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dbhuab86egduc"
-path="res://.godot/imported/Montserrat-SemiBold.ttf-0d1f3244caa0ac1d184d03f3bd8f41e2.fontdata"
+uid="uid://cos4gvmujlvil"
+path="res://.godot/imported/PlayfairDisplay-SemiBold.ttf-7e6d1243237d3060ca51bc9c1f3829d4.fontdata"
 
 [deps]
 
-source_file="res://assets/Montserrat-SemiBold.ttf"
-dest_files=["res://.godot/imported/Montserrat-SemiBold.ttf-0d1f3244caa0ac1d184d03f3bd8f41e2.fontdata"]
+source_file="res://assets/PlayfairDisplay-SemiBold.ttf"
+dest_files=["res://.godot/imported/PlayfairDisplay-SemiBold.ttf-7e6d1243237d3060ca51bc9c1f3829d4.fontdata"]
 
 [params]
 

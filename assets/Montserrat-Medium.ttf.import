@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://fpi2exq05uud"
-path="res://.godot/imported/PlayfairDisplay-SemiBoldItalic.ttf-002c641ecc849845d7c9ad748e8c3a85.fontdata"
+uid="uid://bc5568tcsyop8"
+path="res://.godot/imported/Montserrat-Medium.ttf-6c1fbbde4ebff10602ee4eb2a48ac610.fontdata"
 
 [deps]
 
-source_file="res://assets/PlayfairDisplay-SemiBoldItalic.ttf"
-dest_files=["res://.godot/imported/PlayfairDisplay-SemiBoldItalic.ttf-002c641ecc849845d7c9ad748e8c3a85.fontdata"]
+source_file="res://assets/Montserrat-Medium.ttf"
+dest_files=["res://.godot/imported/Montserrat-Medium.ttf-6c1fbbde4ebff10602ee4eb2a48ac610.fontdata"]
 
 [params]
 
