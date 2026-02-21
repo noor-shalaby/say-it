@@ -20,7 +20,7 @@ func _ready():
 	tween.tween_property(proposal_label, "visible_ratio", 1.0, 0.6)
 	
 	await scene_tree.create_timer(1.0).timeout
-	
+	 
 	tween = create_tween().set_parallel(true) \
 	.set_trans(Tween.TRANS_ELASTIC) \
 	.set_ease(Tween.EASE_OUT)
