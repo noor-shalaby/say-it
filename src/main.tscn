@@ -3,8 +3,14 @@
 [ext_resource type="FontFile" uid="uid://bc5568tcsyop8" path="res://assets/Montserrat-Medium.ttf" id="1_3cfgd"]
 [ext_resource type="Script" uid="uid://p571pl2p00cv" path="res://src/main.gd" id="1_fyndt"]
 [ext_resource type="Script" uid="uid://cdcsxps2yx4uw" path="res://src/no_button.gd" id="1_gh0ne"]
+[ext_resource type="Shader" uid="uid://cqxn5p7kd6u24" path="res://src/background_glow_center.gdshader" id="2_kmhfv"]
 [ext_resource type="FontFile" uid="uid://cos4gvmujlvil" path="res://assets/PlayfairDisplay-SemiBold.ttf" id="3_3cfgd"]
 [ext_resource type="Script" uid="uid://cu1gi5w5sawn8" path="res://src/yes_button.gd" id="4_3cfgd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rlaii"]
+shader = ExtResource("2_kmhfv")
+shader_parameter/center_color = Color(0.13, 0.13, 0.15, 1)
+shader_parameter/edge_color = Color(0.11, 0.11, 0.12, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewff"]
 bg_color = Color(0.5411765, 0.24313726, 0.30980393, 1)
@@ -33,6 +39,7 @@ grow_vertical = 2
 script = ExtResource("1_fyndt")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1632626786]
+material = SubResource("ShaderMaterial_rlaii")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
