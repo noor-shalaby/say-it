@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dxerjja01tmkl"]
 
 [ext_resource type="FontFile" uid="uid://bc5568tcsyop8" path="res://assets/Montserrat-Medium.ttf" id="1_3cfgd"]
-[ext_resource type="Script" uid="uid://duoxbdiftmava" path="res://src/buttona.gd" id="1_eewff"]
 [ext_resource type="Script" uid="uid://cdcsxps2yx4uw" path="res://src/no_button.gd" id="1_gh0ne"]
 [ext_resource type="FontFile" uid="uid://cos4gvmujlvil" path="res://assets/PlayfairDisplay-SemiBold.ttf" id="3_3cfgd"]
+[ext_resource type="Script" uid="uid://cu1gi5w5sawn8" path="res://src/yes_button.gd" id="4_3cfgd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewff"]
 bg_color = Color(0.5411765, 0.24313726, 0.30980393, 1)
@@ -15,6 +15,7 @@ corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ts572"]
 bg_color = Color(0.78039217, 0.36078432, 0.43529412, 1)
+border_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 corner_radius_top_left = 64
 corner_radius_top_right = 64
 corner_radius_bottom_right = 64
@@ -52,6 +53,7 @@ offset_right = -20.0
 offset_bottom = 94.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_focus_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_pressed_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
@@ -97,6 +99,7 @@ offset_right = 200.0
 offset_bottom = 94.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_focus_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_pressed_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
@@ -108,14 +111,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ts572")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ts572")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ts572")
 text = "Yes"
-script = ExtResource("1_eewff")
-hover_scale = 1.2
+script = ExtResource("4_3cfgd")
 
 [connection signal="mouse_entered" from="NoButton" to="NoButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="NoButton" to="NoButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="NoButton" to="NoButton" method="_on_pressed"]
-[connection signal="resized" from="NoButton" to="NoButton" method="_on_resized"]
 [connection signal="mouse_entered" from="YesButton" to="YesButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="YesButton" to="YesButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="YesButton" to="YesButton" method="_on_pressed"]
-[connection signal="resized" from="YesButton" to="YesButton" method="_on_resized"]

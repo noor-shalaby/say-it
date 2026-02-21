@@ -1,4 +1,4 @@
-extends Buttona
+extends Button
 
 
 @onready var viewport: Viewport = get_viewport()
@@ -15,5 +15,9 @@ func get_random_point_in_viewport() -> Vector2:
 
 func _on_mouse_entered() -> void:
 	var target_pos: Vector2 = get_random_point_in_viewport()
-	var _tween: Tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
-	_tween.tween_property(self, "global_position", target_pos, global_position.distance_to(target_pos) * 0.0005)
+	
+	var tween: Tween = create_tween() \
+	.set_trans(Tween.TRANS_SINE) \
+	.set_ease(Tween.EASE_IN_OUT)
+	
+	tween.tween_property(self, "global_position", target_pos, global_position.distance_to(target_pos) * 0.0005)
