@@ -18,7 +18,6 @@ func _ready() -> void:
 	await scene_tree.create_timer(0.5).timeout
 	
 	var tween: Tween = create_tween()
-	#tween.tween_property(proposal_label, "visible_ratio", 1.0, 1.0)
 	tween.tween_property(proposal_label, "visible_ratio", 0.2, 0.3)
 	tween.tween_interval(0.3)
 	tween.tween_property(proposal_label, "visible_ratio", 0.4, 0.3)
