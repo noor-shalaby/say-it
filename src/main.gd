@@ -20,10 +20,10 @@ func _ready() -> void:
 	await scene_tree.create_timer(0.5).timeout
 	
 	var tween: Tween = create_tween()
-	tween.tween_property(headline, "visible_ratio", 0.3, 0.5)
-	tween.tween_interval(0.3)
-	tween.tween_property(headline, "visible_ratio", 0.5, 0.5)
-	tween.tween_interval(0.3)
+	tween.tween_property(headline, "visible_ratio", 0.3, 0.4)
+	tween.tween_interval(0.5)
+	tween.tween_property(headline, "visible_ratio", 0.5, 0.4)
+	tween.tween_interval(0.5)
 	tween.tween_property(headline, "visible_ratio", 1.0, 0.8)
 	tween.tween_interval(0.5)
 	
@@ -83,6 +83,7 @@ func transition_headline() -> void:
 	# Fade new text in
 	brighten_background()
 	headline.text = "I knew you would ;)"
+	headline.modulate = headline.modulate.lightened(0.05)
 	tween.tween_property(headline, "modulate:a", 1.0, 1.0)
 	tween.tween_property(headline, "position:y", headline.position.y + 10, 1.0)
 	tween.tween_property(headline, "scale", Vector2.ONE, 1.0)
@@ -99,7 +100,7 @@ func _on_yes_button_pressed() -> void:
 	tween.tween_property(no_button, "scale", Vector2.ONE * 0.98, 0.5)
 	tween.tween_interval(1.0)
 	tween.tween_property(yes_button, "modulate:a", 0.0, 1.0)
-	tween.tween_property(yes_button, "scale", Vector2.ONE * 0.98, 1.0)
+	tween.tween_property(yes_button, "scale", Vector2.ONE * 1.02, 1.0)
 	
 	await tween.finished
 	await scene_tree.create_timer(0.5).timeout
