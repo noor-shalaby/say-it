@@ -13,6 +13,8 @@ func _ready():
 	no_button.modulate.a = 0.0
 	yes_button.scale = Vector2.ZERO
 	no_button.scale = Vector2.ZERO
+	yes_button.disabled = true
+	no_button.disabled = true
 	
 	await scene_tree.create_timer(0.2).timeout
 	
@@ -32,4 +34,6 @@ func _ready():
 	tween.tween_property(no_button, "scale", Vector2.ONE, 0.5)
 	
 	await tween.finished
+	yes_button.disabled = false
+	no_button.disabled = false
 	yes_button.start_breathing()

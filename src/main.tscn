@@ -79,11 +79,13 @@ theme_override_colors/font_focus_color = Color(0.9607843, 0.9019608, 0.9098039, 
 theme_override_colors/font_pressed_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_hover_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
+theme_override_colors/font_disabled_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_fonts/font = ExtResource("1_3cfgd")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_eewff")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eewff")
 theme_override_styles/hover = SubResource("StyleBoxFlat_eewff")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_eewff")
 text = "No"
 script = ExtResource("1_gh0ne")
 
@@ -107,11 +109,13 @@ theme_override_colors/font_focus_color = Color(0.9607843, 0.9019608, 0.9098039, 
 theme_override_colors/font_pressed_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_hover_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
+theme_override_colors/font_disabled_color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 theme_override_fonts/font = ExtResource("1_3cfgd")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_ts572")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ts572")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ts572")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ts572")
 text = "Yes"
 script = ExtResource("4_3cfgd")
 
