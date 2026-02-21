@@ -1,9 +1,12 @@
 extends Control
 
- 
+
+const END_TRACK: AudioStreamWAV = preload("uid://pynw0kyixauc")
+
 @onready var scene_tree: SceneTree = get_tree()
 @onready var bg_mat: Material = $Background.material
 @onready var bg_particles: CPUParticles2D = $BackgroundParticlesEmitter/CPUParticles2D
+@onready var bg_track: AudioStreamPlayer = $BackgroundTrack
 @onready var headline: Label = $Headline
 @onready var yes_button: Button = $YesButton
 @onready var no_button: Button = $NoButton
@@ -19,6 +22,7 @@ func _ready() -> void:
 	no_button.is_moving = true
 	
 	await scene_tree.create_timer(0.5).timeout
+	bg_track.play()
 	
 	var tween: Tween = create_tween()
 	tween.tween_property(headline, "visible_ratio", 0.3, 0.4)
@@ -96,6 +100,9 @@ func _on_yes_button_pressed() -> void:
 	
 	piano_a4.play()
 	bg_particles.emitting = false
+	bg_track.stop()
+	bg_track.stream = END_TRACK
+	bg_track.play()
 	
 	var tween: Tween = create_tween() \
 		.set_parallel(true)

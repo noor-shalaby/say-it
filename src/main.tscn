@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://cqxn5p7kd6u24" path="res://src/bg_glow_center.gdshader" id="2_kmhfv"]
 [ext_resource type="FontFile" uid="uid://cos4gvmujlvil" path="res://assets/PlayfairDisplay-SemiBold.ttf" id="3_3cfgd"]
 [ext_resource type="Script" uid="uid://cu1gi5w5sawn8" path="res://src/yes_button.gd" id="4_3cfgd"]
+[ext_resource type="AudioStream" uid="uid://dxosbuyplayx1" path="res://assets/retroindiejosh_pattern.wav" id="4_kf8lf"]
 [ext_resource type="Texture2D" uid="uid://bsf47lhsod1k1" path="res://assets/particle_circle.png" id="7_rlaii"]
 [ext_resource type="AudioStream" uid="uid://bbl7jtgugcpc" path="res://assets/single-piano-note-a4_100bpm_C_major.wav" id="8_5mrjc"]
 
@@ -82,6 +83,9 @@ scale_amount_max = 1.3
 scale_amount_curve = SubResource("Curve_rlaii")
 color = Color(0.9607843, 0.9019608, 0.9098039, 1)
 color_ramp = SubResource("Gradient_rlaii")
+
+[node name="BackgroundTrack" type="AudioStreamPlayer" parent="." unique_id=423735634]
+stream = ExtResource("4_kf8lf")
 
 [node name="Headline" type="Label" parent="." unique_id=1596191804]
 layout_mode = 1
