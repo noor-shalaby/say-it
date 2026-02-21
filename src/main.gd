@@ -15,7 +15,7 @@ func _ready() -> void:
 	no_button.scale = Vector2.ZERO
 	no_button.is_moving = true
 	
-	await scene_tree.create_timer(0.2).timeout
+	await scene_tree.create_timer(0.5).timeout
 	
 	var tween: Tween = create_tween()
 	#tween.tween_property(proposal_label, "visible_ratio", 1.0, 1.0)
