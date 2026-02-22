@@ -117,14 +117,14 @@ func _on_yes_button_pressed() -> void:
 	var tween: Tween = create_tween() \
 		.set_parallel(true)
 	tween.tween_property(no_button, "modulate:a", 0.0, 0.5)
-	tween.tween_property(no_button, "scale", Vector2.ONE * 0.98, 0.5)
+	tween.tween_property(no_button, "scale", Vector2.ONE * 0.95, 0.5)
 	
 	await scene_tree.create_timer(0.2).timeout
 	
 	var tween2: Tween = create_tween() \
 		.set_parallel(true)
-	tween2.tween_property(yes_button, "modulate:a", 0.0, 1.0)
-	tween2.tween_property(yes_button, "scale", Vector2.ONE * 1.02, 1.0)
+	tween2.tween_property(yes_button, "modulate:a", 0.0, 0.7)
+	tween2.tween_property(yes_button, "scale", Vector2.ONE * 0.95, 0.7)
 	
-	await scene_tree.create_timer(0.5).timeout
+	await scene_tree.create_timer(0.9).timeout
 	transition_headline()
