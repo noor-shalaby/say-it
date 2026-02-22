@@ -9,7 +9,13 @@ const UNHOVER_ANIM_DUR: float = 0.2
 var breathing_tween: Tween
 
 
+func _ready() -> void:
+	disabled = true
+
+
 func start_breathing() -> void:
+	disabled = false
+	
 	breathing_tween = create_tween() \
 		.set_trans(Tween.TRANS_SINE) \
 		.set_ease(Tween.EASE_IN_OUT) \
