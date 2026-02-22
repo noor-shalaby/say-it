@@ -19,7 +19,6 @@ func _ready() -> void:
 	no_button.modulate.a = 0.0
 	yes_button.scale = Vector2.ZERO
 	no_button.scale = Vector2.ZERO
-	no_button.is_moving = true
 	
 	await scene_tree.create_timer(0.5).timeout
 	bg_track.play()
@@ -46,7 +45,6 @@ func _ready() -> void:
 	
 	await tween.finished
 	
-	no_button.is_moving = false
 	yes_button.start_breathing()
 
 
