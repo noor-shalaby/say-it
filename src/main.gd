@@ -5,7 +5,7 @@ const END_TRACK: AudioStreamWAV = preload("uid://pynw0kyixauc")
 
 @onready var scene_tree: SceneTree = get_tree()
 @onready var bg_mat: Material = $Background.material
-@onready var bg_particles: CPUParticles2D = $BackgroundParticlesEmitter/CPUParticles2D
+@onready var bg_particles: Array[Node] = $BackgroundParticlesEmitter.get_children()
 @onready var bg_track: AudioStreamPlayer = $BackgroundTrack
 @onready var headline: Label = $Headline
 @onready var yes_button: Button = $YesButton
@@ -68,7 +68,9 @@ func _on_yes_button_pressed() -> void:
 	if no_button_tween:
 		no_button_tween.kill()
 	
-	bg_particles.emitting = false
+	for particle_effect: CPUParticles2D in bg_particles:
+		particle_effect.emitting = false
+	
 	piano_a4.play()
 	bg_track.stop()
 	bg_track.stream = END_TRACK
